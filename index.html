@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,shrink-to-fit=no">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:900" rel="stylesheet">
+  <style type="text/css">
+
+    .block {
+      position: relative;
+      padding: 15px;
+      overflow: hidden;
+    }
+  
+    .block:after{
+      content: '';
+      display: block;
+      padding-bottom: 75%;
+    }
+  
+     .content {
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      right: 1em;
+      bottom: 1em;
+      overflow: hidden
+    }
+  
+     .content-top,
+     .content-bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition-property: transform;
+      transition-timing-function: ease-in-out;
+      transition-duration: 300ms;
+      /* transition-delay: 500ms *//* un-comment for hoverIntent-style delay */
+    }
+  
+     .content-top {
+      transform: translateY(0);
+    }
+  
+     .content-bottom {
+      transform: translateY(100%);
+    }
+  
+     .block:hover .content-top {
+      transform: translateY(-50%)
+    }
+     .block:hover .content-bottom {
+      transform: translateY(50%)
+    }
+  
+    /* SPECIFIC STYLES */
+    /* First example */
+  
+    .example-1 .content-top {
+      color: white;
+      background-color: mediumblue
+    }
+  
+    .example-1 .content-bottom {
+      color: white;
+      background-color: crimson
+    }
+  
+  
+    /* Second example */
+  
+    .example-2 .content-top {
+      background-position: 50% 0%; /* position the background image centered and from the top */
+      background-size: 100% auto; /* aka background-size: cover */
+    }
+  
+    .example-2 .content-bottom {
+      
+    }
+  
+    .example-2 .title,
+    .example-2 .view-more {
+      text-align: center;
+    }
+    
+    .example-2 .title {
+      position: absolute;
+      bottom: 1em;
+      font-size: 2em;
+      text-transform: uppercase;
+      left: 0;
+      right: 0;
+      color: white;
+      font-weight: 900;
+      font-family: "Work Sans";
+    }
+  
+    .example-2 .view-more p {
+      color: white
+    }
+  
+    .example-2 .view-more a.btn {
+      background-color: transparent;
+      background: 0 0;
+      color: white;
+      border: 3px solid white;
+      opacity: 0.8;
+      transition-duration: 300ms;
+      transition-property: opacity;
+      transition-timing-function: ease-in-out;
+    }
+  
+    .example-2 .view-more a.btn:hover{
+      opacity: 1;
+    }
+  
+  </style>
+</head>
+<body>
+<header class="container">
+  <div class="alert alert-success">
+    <h2>Belling hover effect</h2>
+    <h3>Basic Principles</h3>
+  </div>
+</header>
+  <main class="container">
+  
+    <!-- First row: just coloured blocks showing the transformation -->
+    <div class="row example-1">
+      <div class="col-xs-4 col-md-4 block">
+        <div class="content">
+          <div class="content-top">
+            Content top
+          </div>
+          <div class="content-bottom">
+            Content-bottom
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 col-md-4 block">
+        <div class="content">
+          <div class="content-top">
+            Content top
+          </div>
+          <div class="content-bottom">
+            Content-bottom
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 col-md-4 block">
+        <div class="content">
+          <div class="content-top">
+            Content top
+          </div>
+          <div class="content-bottom">
+            Content-bottom
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <!-- Second row: replicate the full effect -->
+    <div class="row example-2">
+  
+      <!-- Just the heading -->
+      <div class="col-xs-12">
+        <div class="alert alert-success">
+          <h2>Replicating the Belling rollovers</h2>
+        </div>
+      </div>
+  
+      <!-- The good stuff -->
+      <div class="col-xs-4 col-md-4 block">
+        <div class="content" style="background-color:#fdcb12;">
+          <div class="content-top" style="background-image:url(http://www.belling.co.uk/media/623452/belling_homepage_rollovers.png);">
+            <div class="title">
+              Product Brochure
+            </div>
+          </div>
+          <div class="content-bottom">
+            <div class="view-more">
+              <p class="lead">View our latest brochure here</p>
+              <a href="#" class="btn btn-default">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 col-md-4 block">
+        <div class="content" style="background-color:#92c24a;">
+          <div class="content-top" style="background-image:url(http://www.belling.co.uk/media/623453/belling_homepage_rollovers2.png);">
+            <div class="title">
+              Cookshop
+            </div>
+          </div>
+          <div class="content-bottom">
+            <div class="view-more">
+              <p class="lead">Shop now</p>
+              <a href="#" class="btn btn-default">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-4 col-md-4 block">
+        <div class="content" style="background-color:#1eb3d1;">
+          <div class="content-top" style="background-image:url(http://www.belling.co.uk/media/623454/belling_homepage_rollovers3.png);">
+            <div class="title">
+              Latest
+            </div>
+          </div>
+          <div class="content-bottom">
+            <div class="view-more">
+              <p class="lead">View our latest news here</p>
+              <a href="#" class="btn btn-default">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
