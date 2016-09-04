@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,shrink-to-fit=no">
+  <title>Belling Rollover Demo</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:900" rel="stylesheet">
   <style type="text/css">
-
+  /* BASIC/GLOBAL STYLES */
     .block {
       position: relative;
       padding: 15px;
@@ -55,10 +56,10 @@
      .block:hover .content-bottom {
       transform: translateY(50%)
     }
-  
-    /* SPECIFIC STYLES */
-    /* First example */
-  
+    
+  /*-----------------------------------*/
+  /* SPECIFIC STYLES */
+  /* First example */
     .example-1 .content-top {
       color: white;
       background-color: mediumblue
@@ -69,9 +70,8 @@
       background-color: crimson
     }
   
-  
-    /* Second example */
-  
+  /*-----------------------------------*/
+  /* Second example */
     .example-2 .content-top {
       background-position: 50% 0%; /* position the background image centered and from the top */
       background-size: 100% auto; /* aka background-size: cover */
@@ -97,12 +97,23 @@
       font-weight: 900;
       font-family: "Work Sans";
     }
+    
+    .example-2 .view-more {
+      opacity: 0.1;
+      transition-duration: 300ms;
+      transition-property: opacity;
+      transition-timing-function: ease-in-out;
+    }
+    
+    .example-2 .block:hover .view-more {
+      opacity: 1;
+    }
   
-    .example-2 .view-more p {
+    .example-2 .view-more .lead {
       color: white
     }
   
-    .example-2 .view-more a.btn {
+    .example-2 .view-more .btn {
       background-color: transparent;
       background: 0 0;
       color: white;
@@ -113,7 +124,7 @@
       transition-timing-function: ease-in-out;
     }
   
-    .example-2 .view-more a.btn:hover{
+    .example-2 .view-more .btn:hover{
       opacity: 1;
     }
   
