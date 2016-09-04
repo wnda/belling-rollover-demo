@@ -13,15 +13,16 @@
       position: relative;
       padding: 15px;
       overflow: hidden;
+      touch-action: manipulation;
     }
   
-    .block:after{
+    .block:after {
       content: '';
       display: block;
       padding-bottom: 75%;
     }
   
-     .content {
+    .content {
       position: absolute;
       top: 15px;
       left: 15px;
@@ -30,8 +31,8 @@
       overflow: hidden;
     }
   
-     .content-top,
-     .content-bottom {
+    .content-top,
+    .content-bottom {
       position: absolute;
       top: 0;
       left: 0;
@@ -62,14 +63,19 @@
       transform:         translateY(100%);
     }
   
-    .block:hover .content-top {
+    .block:hover .content-top,
+    .block:focus .content-top,
+    .block:active .content-top {
       -webkit-transform: translateY(-50%);
       -moz-transform:    translateY(-50%);
       -ms-transform:     translateY(-50%);
       -o-transform:      translateY(-50%);
       transform:         translateY(-50%);
     }
-    .block:hover .content-bottom {
+    
+    .block:hover .content-bottom,
+    .block:focus .content-bottom,
+    .block:active .content-bottom {
       -webkit-transform: translateY(50%);
       -moz-transform:    translateY(50%);
       -ms-transform:     translateY(50%);
@@ -146,7 +152,9 @@
       transition-timing-function: ease-in-out;
     }
     
-    .example-2 .block:hover .view-more {
+    .example-2 .block:hover .view-more,
+    .example-2 .block:active .view-more,
+    .example-2 .block:focus .view-more {
       opacity: 1;
     }
   
@@ -165,7 +173,9 @@
       transition-timing-function: ease-in-out;
     }
   
-    .example-2 .view-more .btn:hover{
+    .example-2 .view-more .btn:hover,
+    .example-2 .view-more .btn:active, 
+    .example-2 .view-more .btn:focus {
       opacity: 1;
     }
     
@@ -178,7 +188,6 @@
         font-size: 24px;
       }
     }
-  
   </style>
 </head>
 <body>
