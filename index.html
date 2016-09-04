@@ -69,7 +69,8 @@
     .block:active .content-top,
     .content:hover .content-top,
     .content:focus .content-top,
-    .content:active .content-top {
+    .content:active .content-top,
+    .hovered .content-top {
       -webkit-transform: translateY(-50%);
       -moz-transform:    translateY(-50%);
       -ms-transform:     translateY(-50%);
@@ -82,7 +83,8 @@
     .block:active .content-bottom,
     .content:hover .content-bottom,
     .content:focus .content-bottom,
-    .content:active .content-bottom{
+    .content:active .content-bottom,
+    .hovered .content-bottom {
       -webkit-transform: translateY(50%);
       -moz-transform:    translateY(50%);
       -ms-transform:     translateY(50%);
@@ -314,5 +316,26 @@
       </div>
     </div>
   </main>
+  <script type="text/javascript">
+    (function(){
+      var blocks = document.querySelectorAll(".block,.content"),
+      b = blocks.length,
+      handleTouchHover = function(e){
+        var that = (e.target || this);
+        var hovered = document.querySelectorAll(".hovered"),
+            h = hovered.length;
+      
+          while(h--){
+            hovered[h].classList.remove("hovered");
+          }
+      
+          that.classList.add("hovered");
+      };
+      
+      while(b--){
+        blocks[b].addEventListener("touchend", handleTouchHover, false);
+      }
+    }());
+  </script>
 </body>
 </html>
