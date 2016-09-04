@@ -26,7 +26,7 @@
       left: 15px;
       right: 15px;
       bottom: 15px;
-      overflow: hidden
+      overflow: hidden;
     }
   
      .content-top,
@@ -36,25 +36,44 @@
       left: 0;
       right: 0;
       bottom: 0;
+      -webkit-transition-property: -webkit-transform;
       transition-property: transform;
+      -webkit-transition-timing-function: ease-in-out;
       transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 300ms;
       transition-duration: 300ms;
       /* transition-delay: 500ms *//* un-comment for hoverIntent-style delay */
     }
   
-     .content-top {
-      transform: translateY(0);
+    .content-top {
+      -webkit-transform: translateY(0);
+      -moz-transform:    translateY(0);
+      -ms-transform:     translateY(0);
+      -o-transform:      translateY(0);
+      transform:         translateY(0);
     }
   
-     .content-bottom {
-      transform: translateY(100%);
+    .content-bottom {
+      -webkit-transform: translateY(100%);
+      -moz-transform:    translateY(100%);
+      -ms-transform:     translateY(100%);
+      -o-transform:      translateY(100%);
+      transform:         translateY(100%);
     }
   
-     .block:hover .content-top {
-      transform: translateY(-50%)
+    .block:hover .content-top {
+      -webkit-transform: translateY(-50%);
+      -moz-transform:    translateY(-50%);
+      -ms-transform:     translateY(-50%);
+      -o-transform:      translateY(-50%);
+      transform:         translateY(-50%);
     }
-     .block:hover .content-bottom {
-      transform: translateY(50%)
+    .block:hover .content-bottom {
+      -webkit-transform: translateY(50%);
+      -moz-transform:    translateY(50%);
+      -ms-transform:     translateY(50%);
+      -o-transform:      translateY(50%);
+      transform:         translateY(50%);
     }
     
   /*-----------------------------------*/
@@ -75,6 +94,25 @@
     .example-2 .content-top {
       background-position: 50% 0%; /* position the background image centered and from the top */
       background-size: 100% auto; /* aka background-size: cover */
+    }
+    
+    .product-brochure {
+      background-color: #fdcb12;
+    }
+    .cookshop {
+      background-color: #92c24a;
+    }
+    .latest {
+      background-color: #1eb3d1;
+    }
+    .product-brochure .content-top {
+      background-image: url(belling_homepage_rollovers.png);
+    }
+    .cookshop .content-top {
+      background-image: url(belling_homepage_rollovers2.png);
+    }
+    .latest .content-top {
+      background-image:url(belling_homepage_rollovers3.png);
     }
   
     .example-2 .content-bottom {
@@ -194,8 +232,8 @@
   
       <!-- The good stuff -->
       <div class="col-xs-4 col-md-4 block">
-        <div class="content" style="background-color:#fdcb12;">
-          <div class="content-top" style="background-image:url(http://www.belling.co.uk/media/623452/belling_homepage_rollovers.png);">
+        <div class="content product-brochure">
+          <div class="content-top">
             <div class="icon">
               <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
             </div>
@@ -212,8 +250,8 @@
         </div>
       </div>
       <div class="col-xs-4 col-md-4 block">
-        <div class="content" style="background-color:#92c24a;">
-          <div class="content-top" style="background-image:url(http://www.belling.co.uk/media/623453/belling_homepage_rollovers2.png);">
+        <div class="content cookshop">
+          <div class="content-top">
             <div class="icon">
               <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
             </div>
@@ -230,8 +268,8 @@
         </div>
       </div>
       <div class="col-xs-4 col-md-4 block">
-        <div class="content" style="background-color:#1eb3d1;">
-          <div class="content-top" style="background-image:url(http://www.belling.co.uk/media/623454/belling_homepage_rollovers3.png);">
+        <div class="content latest">
+          <div class="content-top">
             <div class="icon">
               <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
             </div>
